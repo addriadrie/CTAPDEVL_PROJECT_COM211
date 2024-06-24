@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#f1ede6">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="-30dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="85dp"
+            android:fontFamily="@font/epilogue_semibold"
+            android:text="Get Started"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/banner"
+            android:layout_width="360dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"
+            app:srcCompat="@drawable/bg_banner" />
+
+        <ImageView
+            android:id="@+id/element_1"
+            android:layout_width="146dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="96dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.905"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_image_forex" />
+
+        <TextView
+            android:id="@+id/usdtophp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/epilogue_semibold"
+            android:text="1 USD = 58.75 PHP"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/element_1"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="@+id/banner"
+            app:layout_constraintTop_toTopOf="@+id/banner" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/epilogue"
+            android:text="As of June 25, 2024"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/usdtophp"
+            app:layout_constraintStart_toStartOf="@+id/usdtophp"
+            app:layout_constraintTop_toBottomOf="@+id/usdtophp" />
+
+        <TextView
+            android:id="@+id/via"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/epilogue_light_italic"
+            android:text="(via Open Exchange Rates)"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/date"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="@+id/date"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <TextView
+            android:id="@+id/features"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/epilogue_semibold"
+            android:text="Features"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+        <ImageButton
+            android:id="@+id/scan_btn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/features"
+            app:srcCompat="@drawable/bg_icon" />
+
+        <ImageView
+            android:id="@+id/scan_ic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/scan_btn"
+            app:layout_constraintEnd_toEndOf="@+id/scan_btn"
+            app:layout_constraintStart_toStartOf="@+id/scan_btn"
+            app:layout_constraintTop_toTopOf="@+id/scan_btn"
+            app:srcCompat="@drawable/ic_image_scan" />
+
+        <TextView
+            android:id="@+id/scan_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/epilogue_light"
+            android:text="Scan"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/scan_btn"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/scan_btn"
+            app:layout_constraintTop_toBottomOf="@+id/scan_btn" />
+
+        <TextView
+            android:id="@+id/coming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/epilogue_semibold"
+            android:text="Coming Soon"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scan_label" />
+
+        <ImageButton
+            android:id="@+id/coming_btn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coming"
+            app:srcCompat="@drawable/bg_icon" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/coming_btn"
+            app:layout_constraintEnd_toEndOf="@+id/coming_btn"
+            app:layout_constraintStart_toStartOf="@+id/coming_btn"
+            app:layout_constraintTop_toTopOf="@+id/coming_btn"
+            app:srcCompat="@drawable/ic_image_world" />
+
+        <TextView
+            android:id="@+id/coming_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/epilogue_light"
+            android:text="ForEx"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/coming_btn"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="@+id/coming_btn"
+            app:layout_constraintTop_toBottomOf="@+id/coming_btn" />
+
+        <ImageButton
+            android:id="@+id/ncg_btn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@+id/coming_btn"
+            app:layout_constraintTop_toBottomOf="@+id/coming"
+            app:srcCompat="@drawable/bg_icon" />
+
+        <ImageView
+            android:id="@+id/ncg_ic"
+            android:layout_width="38dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ncg_btn"
+            app:layout_constraintEnd_toEndOf="@+id/ncg_btn"
+            app:layout_constraintStart_toStartOf="@+id/ncg_btn"
+            app:layout_constraintTop_toTopOf="@+id/ncg_btn"
+            app:srcCompat="@drawable/ic_image_ncg" />
+
+        <TextView
+            android:id="@+id/ncg_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/epilogue_light"
+            android:text="NCG"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/ncg_btn"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="@+id/ncg_btn"
+            app:layout_constraintTop_toBottomOf="@+id/ncg_btn" />
+
+        <ImageButton
+            android:id="@+id/info"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#f1ede6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/info_ic"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/info"
+            app:layout_constraintEnd_toEndOf="@+id/info"
+            app:layout_constraintStart_toStartOf="@+id/info"
+            app:layout_constraintTop_toTopOf="@+id/info"
+            app:srcCompat="@drawable/ic_action_info" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
