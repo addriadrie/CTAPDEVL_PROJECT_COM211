@@ -90,7 +90,7 @@ public class ScanActivity extends AppCompatActivity {
                     maxPos = i;
                 }
             }
-            String[] classes = {"100 Php", "1000 Php", "20 Php", "200 Php", "50 Php", "500 Php"};
+            String[] classes = {"20 Php", "50 Php", "100 Php", "200 Php", "500 Php", "1000 Php"};
             String classificationResult = classes[maxPos];
 
             model.close();
